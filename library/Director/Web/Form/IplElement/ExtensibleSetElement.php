@@ -207,10 +207,6 @@ class ExtensibleSetElement extends BaseHtmlElement
             $attrs = $element->getAttributes();
             $attrs->add('class', 'director-suggest');
             $attrs->set([
-                'autocomplete'   => 'off',
-                'autocorrect'    => 'off',
-                'autocapitalize' => 'off',
-                'spellcheck'     => 'false',
                 'data-suggestion-context' => $this->suggestionContext,
             ]);
         }
@@ -323,12 +319,6 @@ class ExtensibleSetElement extends BaseHtmlElement
                 'name' => $this->name . '[]',
                 'id' => $this->id . $this->suffix($this->chosenOptionCount),
                 'value' => $val
-            ]);
-            $text->getAttributes()->set([
-                'autocomplete'   => 'off',
-                'autocorrect'    => 'off',
-                'autocapitalize' => 'off',
-                'spellcheck'     => 'false',
             ]);
 
             $this->addRemainingAttributes($this->eventuallyDisable($text));
